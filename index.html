@@ -1,30 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Markdown Badge</title>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <title>Badges Example</title>
 </head>
 <body>
   <h1>Hello World</h1>
   <p>I'm hosted with GitHub Pages.</p>
+
+  <!-- Best Practices Badge -->
+  <a href="https://www.bestpractices.dev/projects/8483">
+    <img src="https://www.bestpractices.dev/projects/8483/badge" alt="OpenSSF Best Practices">
+  </a>
+
+  <!-- OpenSSF Scorecard Badge -->
+  <a href="https://securityscorecards.dev/viewer/?uri=github.com/tmeinert2020/tmeinert2020.github.io" target="_blank">
+    <img src="https://api.securityscorecards.dev/projects/github.com/tmeinert2020/tmeinert2020.github.io/badge" alt="OpenSSF Scorecard">
+  </a>
+
   <p>Tim Meinert</p>
   <p>Email: <a href="mailto:trmeinert9424@eagle.fgcu.edu">trmeinert9424@eagle.fgcu.edu</a></p>
-  
-  <!-- Markdown content -->
-  <div id="markdownContent"></div>
-
-  <script>
-    // Markdown content with badge Markdown syntax
-    var markdownContent = `
-# My Project
-
-[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/8483/badge)](https://www.bestpractices.dev/projects/8483)
-
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/tmeinert2020/tmeinert2020.github.io/badge)](https://securityscorecards.dev/viewer/?uri=github.com/tmeinert2020/tmeinert2020.github.io)
-`;
-
-    // Render Markdown content using marked library
-    document.getElementById("markdownContent").innerHTML = marked(markdownContent);
-  </script>
 </body>
 </html>
