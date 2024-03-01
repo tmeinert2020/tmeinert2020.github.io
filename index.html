@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <h1>Hello World</h1>
-  <p>I'm hosted with GitHub Pages.</p>
+<h1>Hello World</h1>
+<p>I'm hosted with github pages.</p>
 
-  <!-- Badge and link for Best Practices.dev -->
-  <a href="https://www.bestpractices.dev/projects/8483" target="_blank">
-    <img src="https://www.bestpractices.dev/projects/8483/badge" alt="OpenSSF Best Practices">
-  </a>
+<!-- HTML structure for the badge and link -->
+<a id="scorecardLink" href="#" target="_blank">
+  <img id="scorecardBadge" src="#" alt="OpenSSF Scorecard">
+</a>
 
-  <!-- Badge and link for OpenSSF Scorecard (Dynamic) -->
-  <a id="scorecardLink" href="#" target="_blank">
-    <img id="scorecardBadge" src="#" alt="OpenSSF Scorecard">
-  </a>
+<!-- JavaScript code to fetch and display the badge and link -->
+<script>
+  // Function to fetch the badge URL and link URL dynamically
+  function fetchBadgeAndLink(owner, repo) {
+    // Construct the URLs with the owner and repo names
+    var badgeUrl = "https://api.securityscorecards.dev/projects/github.com/" + owner + "/" + repo + "/badge";
+    var linkUrl = "https://securityscorecards.dev/viewer/?uri=github.com/" + owner + "/" + repo;
 
-  <script>
-    // Function to fetch the OpenSSF Scorecard badge and link dynamically
-    function fetchBadgeAndLink(owner, repo) {
-      var badgeUrl = "https://api.securityscorecards.dev/projects/github.com/" + owner + "/" + repo + "/badge";
-      var linkUrl = "https://securityscorecards.dev/viewer/?uri=github.com/" + owner + "/" + repo;
+    // Set the src and href attributes of the image and link elements
+    document.getElementById("scorecardBadge").src = badgeUrl;
+    document.getElementById("scorecardLink").href = linkUrl;
+  }
 
-      document.getElementById("scorecardBadge").src = badgeUrl;
-      document.getElementById("scorecardLink").href = linkUrl;
-    }
+  // Call the function with the specified owner and repo
+  fetchBadgeAndLink("tmeinert2020", "tmeinert2020.github.io");
+</script>
 
-    // Call the function with the specified owner and repo
-    fetchBadgeAndLink("tmeinert2020", "tmeinert2020.github.io");
-  </script>
 </body>
 </html>
