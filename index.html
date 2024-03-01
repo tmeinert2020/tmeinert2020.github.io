@@ -1,32 +1,17 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with github pages.</p>
+  <h1>Hello World</h1>
+  <p>I'm hosted with GitHub Pages.</p>
 
-<!-- HTML structure for the badge and link -->
-<a id="scorecardLink" href="#" target="_blank">
-  <img id="scorecardBadge" src="#" alt="OpenSSF Scorecard">
-</a>
-  
-[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/8483/badge)](https://www.bestpractices.dev/projects/8483)
-  
-<!-- JavaScript code to fetch and display the badge and link -->
-<script>
-  // Function to fetch the badge URL and link URL dynamically
-  function fetchBadgeAndLink(owner, repo) {
-    // Construct the URLs with the owner and repo names
-    var badgeUrl = "https://api.securityscorecards.dev/projects/github.com/" + owner + "/" + repo + "/badge";
-    var linkUrl = "https://securityscorecards.dev/viewer/?uri=github.com/" + owner + "/" + repo;
+  <!-- Best Practices Badge -->
+  <a href="https://www.bestpractices.dev/projects/8483">
+    <img src="https://www.bestpractices.dev/projects/8483/badge" alt="OpenSSF Best Practices">
+  </a>
 
-    // Set the src and href attributes of the image and link elements
-    document.getElementById("scorecardBadge").src = badgeUrl;
-    document.getElementById("scorecardLink").href = linkUrl;
-  }
-
-  // Call the function with the specified owner and repo
-  fetchBadgeAndLink("tmeinert2020", "tmeinert2020.github.io");
-</script>
-
+  <!-- OpenSSF Scorecard Badge -->
+  <a href="https://securityscorecards.dev/viewer/?uri=github.com/tmeinert2020/tmeinert2020.github.io" target="_blank">
+    <img src="https://api.securityscorecards.dev/projects/github.com/tmeinert2020/tmeinert2020.github.io/badge" alt="OpenSSF Scorecard">
+  </a>
 </body>
 </html>
